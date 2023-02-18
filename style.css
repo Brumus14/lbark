@@ -15,12 +15,20 @@ body {
   cursor: none;
 }
 
-#cursor {
+#background-canvas {
   position: absolute;
-  transform: translate(-50%, -50%);
-  filter: invert();
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
 }
 
 #cursor {
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+  transform: translate(-50%, -50%);
   mix-blend-mode: difference;
+  background-color: transparent;
+  pointer-events: none;
+  /* filter: invert(); */
 }
