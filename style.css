@@ -12,7 +12,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  cursor: none;
+  /* cursor: none; */
 }
 
 #background-canvas {
@@ -24,11 +24,11 @@ body {
 
 #cursor {
   position: absolute;
-  top: -4rem;
-  left: -4rem;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   background-color: transparent;
   pointer-events: none;
-  /* filter: invert(); */
+  width: 3rem;
+  height: auto;
+  transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
 }
