@@ -1,20 +1,28 @@
 let dotPositions = [];
+let cursorX = 0;
+let cursorY = 0;
 
 //#region Cursor Control
 {
+  const cursor = document.querySelector("#cursor");
   let firstCursorMove = true;
 
   document.onmousemove = (event) => {
-    const cursor = document.querySelector("#cursor");
-  
     if (firstCursorMove) {
       firstCursorMove = false;
       cursor.style.opacity = 1;
     }
 
-    cursor.style.left = event.clientX + "px";
-    cursor.style.top = event.clientY + "px";
+    cursorX = event.clientX;
+    cursorY = event.clientY;
+
+    cursor.style.left = cursorX + "px";
+    cursor.style.top = cursorY + "px";
   };
+
+  document.onmousedown = () => {
+    expandingDot();
+  }
 
   document.querySelectorAll("button").forEach(button => {
     button.addEventListener("mouseenter", () => {
@@ -72,10 +80,26 @@ let dotPositions = [];
       drawDot(dotPosition.x, dotPosition.y);
       dotPositions.push(dotPosition);
     }
+  }
 
-    else {
-      //GenerateDot();
-    }
+  function expandingDot() {
+    let expandingCircle = document.createElement("div");
+    document.body.appendChild(expandingCircle);
+    expandingCircle.style.cssText = `position: absolute; left: ${cursorX}px; top: ${cursorY}px; transform: translate(-50%, -50%) scale(0); border-radius: 50%; background-color: black; transition: transform 1s ease-in-out; will-change: transform;`;
+
+    setTimeout(() => {
+      if (window.innerHeight > window.innerWidth) {
+        expandingCircle.style.width = "250vh";
+        expandingCircle.style.height = "250vh";
+      }
+  
+      else {
+        expandingCircle.style.width = "250vw";
+        expandingCircle.style.height = "250vw";
+      }
+
+      expandingCircle.style.transform = "translate(-50%, -50%) scale(1)";
+    }, 0);
   }
 
   for (let i = 0; i < 20; i++) {
