@@ -11,6 +11,7 @@ let cursorY = 0;
     if (firstCursorMove) {
       firstCursorMove = false;
       cursor.style.opacity = 1;
+      event
     }
 
     cursorX = event.clientX;
