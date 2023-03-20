@@ -32,4 +32,5 @@ body {
   width: 3rem;
   height: auto;
   transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
+  z-index: 1;
 }
