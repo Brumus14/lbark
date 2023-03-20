@@ -55,7 +55,7 @@ let cursorY = 0;
 
   function drawDot(x, y) {
     let distance = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
-    let dotSize = 50 / (1 + Math.pow(Math.E, -((-0.005 * distance) + 4)));
+    let dotSize = Math.max(50 / (1 + Math.pow(Math.E, -((-0.005 * distance) + 4))), 20);
 
     context.beginPath();
     context.arc(x, y, dotSize, 0, 2 * Math.PI, false);
