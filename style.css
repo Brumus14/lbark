@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: white;
+  background-color: transparent;
 }
 
 html {
@@ -10,17 +10,21 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   /* cursor: none; */
-}
-
-#background-canvas {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent;
+  background: linear-gradient(
+    135deg,
+    rgba(95, 21, 242, 1) 0%,
+    rgba(28, 127, 238, 1) 25%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(63, 218, 216, 1) 75%,
+    rgba(79, 220, 74, 1) 100%
+  );
 }
 
 #cursor {
@@ -33,4 +37,48 @@ body {
   height: auto;
   transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
   z-index: 1;
+}
+
+.hero {
+  font-size: 15rem;
+  font-family: 'Anonymous Pro';
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+}
+
+#burger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25vw;
+  height: 25vw;
+  background-color: transparent;
+}
+
+#burger-menu .circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: radial-gradient(circle at center, rgba(255,255,255,0.7) 30%,rgba(255,255,255,0) 70%); */
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(40%, -40%);
+}
+
+#burger-menu .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  width: 75%;
+  height: 75%;
+}
+
+#burger-menu .menu-bar {
+  width: 100%;
+  height: 25%;
+  border-radius: 3rem;
+  background-color: transparent;
 }

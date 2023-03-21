@@ -1,1 +1,7 @@
 [ ] Add an about saying how this website is made from scratch
+
+Math.max(50 / (1 + Math.pow(Math.E, -((-0.005 * distance) + 4))), 5)
+
+squares in a grid that expand to cover the screen
+
+burger menu with a 0 opacity gradient circle around it. Top right corner. When hovered over it expands a circle to fill a rectangle which is the menu
