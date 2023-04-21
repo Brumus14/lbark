@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#cursor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  background-color: transparent;
+  pointer-events: none;
+  width: 3rem;
+  height: auto;
+  transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  padding: 2rem 25vw 0 25vw;
+  font-size: 3rem;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-family: "Ubuntu Mono";
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  padding: 1rem 0;
+  width: 20%;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

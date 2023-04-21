@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(95, 21, 242, 1) 0%,
+    rgba(28, 127, 238, 1) 25%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(63, 218, 216, 1) 75%,
+    rgba(79, 220, 74, 1) 100%
+  );
+}
+
+.hero {
+    font-size: 15rem;
+    font-family: "Anonymous Pro";
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+}
