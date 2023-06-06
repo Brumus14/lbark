@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #262626;
+}
+
+.hero {
+  font-size: 20rem;
+  font-family: "Anonymous Pro";
+  font-weight: bold;
+  color: #2F2F2F;
+  background-color: transparent;
+}

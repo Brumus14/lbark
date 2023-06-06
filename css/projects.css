@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262626;
+  padding-top: 10vh;
+}
+
+.projects-container {
+  margin: 10vh 0;
+  width: 90vw;
+}
+
+.projects, .repositories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.projects-title {
+  font-family: 'Ubuntu Mono';
+  font-size: 7rem;
+  font-size: bold;
+  color: #248232;
+}
+
+.projects-title span {
+  font-family: 'Nerd Font';
+}
+
+.column {
+  position: relative;
+  width: calc((100% - ((3 - 1) * 2rem)) / 3); /*DO THIS IN JS TO BE RESPONSIVE FOR DIFFERENT NUMBER OF COLUMNS*/
+  height: min-content;
+}
+
+.container {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  background-color: rgb(53, 53, 53);
+  /* box-shadow: inset 0 0 2rem rgb(37, 37, 37); */
+  padding: 2rem;
+  transition: transform 0.3s, background-color 0.3s;
+  backface-visibility: hidden;
+  transform-origin: center center;
+  height: min-content;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  background-color: rgb(58, 58, 58);
+}
+
+.container p {
+  color: #C2C2C2;
+}
+
+.container .title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-family: "Lato";
+  font-weight: bold;
+  color: #dfdfdf;
+}
+
+.container .description {
+  font-size: 2.5rem;
+  font-family: "Ubuntu Mono";
+}

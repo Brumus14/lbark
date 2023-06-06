@@ -1,0 +1,20 @@
+[ ] Add an about saying how this website is made from scratch
+
+Math.max(50 / (1 + Math.pow(Math.E, -((-0.005 * distance) + 4))), 5)
+
+squares in a grid that expand to cover the screen
+
+burger menu with a 0 opacity gradient circle around it. Top right corner. When hovered over it expands a circle to fill a rectangle which is the menu
+
+when cursor goes off screen it adds scroll bars
+
+spawn an apple if clicked can play snake
+
+git respositories using github api
+
+https://api.github.com/users/Brumus14/repos
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+https://stackoverflow.com/questions/4659549/maintain-git-repo-inside-another-git-repo
+
+when hovered over text centre circle smaller and vertical line gets bigger

@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262626;
+  padding-top: 10vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  height: 75vh;
+}
+
+.avatar {
+  transform: translateY(65%);
+  width: 12rem;
+  height: 12rem;
+}
+
+.speechbox {
+  position: relative;
+  background-color: #2F2F2F;
+  border-radius: 1rem 1rem 1rem 0;
+  width: 50vw;
+  height: min-content;
+  padding: 3rem;
+}
+
+.speechbox .triangle {
+  position: absolute;
+  width: 4rem;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+}
+
+.speechbox p {
+  font-size: 5rem;
+  color: #C2C2C2;
+  font-family: 'Ubuntu Mono';
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+}
+
+footer a {
+  font-family: 'Nerd Font';
+  font-size: 10rem;
+  text-decoration: none;
+  color: #248232;
+}

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Nerd Font';
+  src: url('../fonts/SymbolsNerdFontMono-Regular.ttf') format('truetype');
+}
+
+:root {
+  --menuItemWidth: 9ch;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#selected {
+  color: #4381C1;
+}
+
+#cursor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  background-color: transparent;
+  pointer-events: none;
+  width: 3rem;
+  height: auto;
+  transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 60vw;
+  height: 10vh;
+  padding-top: 2rem;
+  font-size: 5rem;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #262626;
+  background-color: #2F2F2F;
+  font-family: "Ubuntu Mono";
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  box-sizing: initial;
+  padding: 1rem 2rem;
+  min-width: var(--menuItemWidth);
+  border-radius: 1.5rem;
+  transition: color 0.3s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.menu a:hover {
+  color: #30445A;
+}
+
+.menu a:focus {
+  color: #39638D;
+}
