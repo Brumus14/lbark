@@ -18,3 +18,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 https://stackoverflow.com/questions/4659549/maintain-git-repo-inside-another-git-repo
 
 when hovered over text centre circle smaller and vertical line gets bigger
+
+boidy width to 100% instead of 100vw to remove horizontal scrollbar
+
+nerd font not loading on first time
