@@ -11,9 +11,11 @@
     <script src="./js/projects.js" defer></script>
     <title>lBark</title>
   </head>
-  <body onload="globalOnLoad();loadProjects();loadRepositories();">
+  <body onresize="updateProjects();" onload="globalOnLoad();loadProjects();loadWebApps();loadRepositories();updateProjects();">
     <div id="fading-screen" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #262626; transition: opacity 0.3s ease-in-out; opacity: 1; z-index: 999;"></div>
-    <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
+    <div class="cursor-container">
+      <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
+    </div>
     <div class="menu">
       <a href="./index.html" draggable="false">Home</a>
       <a href="" id="selected" draggable="false">Projects</a>
@@ -22,31 +24,11 @@
     <div class="projects-container">
       <p class="projects-title"><span>󰉋</span> projects</p>
       <div class="projects">
-        <div class="container">
-          <p class="title">Cool Project</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-
-        <div class="container">
-          <p class="title">Cool Project</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam magni temporibus! Eligendi consectetur molestias et, eveniet quaerat provident odit? Fugit amet nemo tempore nam quidem cum, sed nesciunt fugiat!</p>
-        </div>
-
-        <div class="container">
-          <p class="title">Cool Project</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam magni temporibus! Eligendi consectetur molestias et, eveniet quaerat provident odit?</p>
-        </div>
-
-        <div class="container">
-          <p class="title">Cool Project</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam magni temporibus! Eligendi consectetur molestias et,</p>
-        </div>
-
-        <div class="container">
-          <p class="title">Cool Project</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam magni temporibus! Eligendi consectetur molestias et, eveniet quaerat provident odit? Fugit amet nemo tempore nam quidem cum,</p>
-        </div>
       </div>
+    </div>
+    <div class="projects-container">
+      <p class="projects-title"><span>󰖟</span> web apps</p>
+      <div class="web-apps"></div>
     </div>
     <div class="projects-container">
       <p class="projects-title"><span></span> repos</p>

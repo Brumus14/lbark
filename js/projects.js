@@ -1,6 +1,11 @@
+let defaultcolumnWidth = 680;
+let numberOfColumns = Math.ceil(document.querySelector(".projects-container").getBoundingClientRect().width / defaultcolumnWidth);
+
 function loadProjects()
 {
-  let numberOfColumns = 3;
+  let projectData = [
+    ["Raycaster", "A basic raycasting program made in C++ with SFML"],
+  ];
 
   for (let i = 0; i < numberOfColumns; i++) {
     let newColumn = document.createElement("div");
@@ -9,8 +14,18 @@ function loadProjects()
   }
 
   let columns = document.querySelectorAll(".projects .column")
-  let projects = document.querySelectorAll(".projects .container");
 
+  projectData.forEach(project => {
+    let newProject = document.createElement("div");
+    newProject.className =  "container";
+    newProject.innerHTML = `
+    <p class="title">${project[0]}</p>
+    <p class="description">${project[1]}</p>`;
+    document.querySelector(".projects").appendChild(newProject);
+  });
+
+  let projects = document.querySelectorAll(".projects .container");
+  
   projects.forEach(project => {
     let smallestIndex = 0;
 
@@ -24,17 +39,60 @@ function loadProjects()
   });
 }
 
+function loadWebApps()
+{
+  let webAppData = [
+    ["Rollr", "An adjustable dice simulator"],
+    ["Stimer", "A timer"],
+    ["Genn", "Secure password generator"],
+    ["Rring", "A simple alarm"],
+    ["VCtimer", "A Rubiks cube timer with stats"],
+    ["Numer", "A basic easy to use calculator"],
+    ["Klick", "A minimal cps tester"],
+  ];
+
+  for (let i = 0; i < numberOfColumns; i++) {
+    let newColumn = document.createElement("div");
+    newColumn.className = "column";
+    document.querySelector(".web-apps").appendChild(newColumn);
+  }
+
+  let columns = document.querySelectorAll(".web-apps .column")
+
+  webAppData.forEach(webApp => {
+    let newWebApp = document.createElement("div");
+    newWebApp.className =  "container";
+    newWebApp.innerHTML = `
+    <p class="title">${webApp[0]}</p>
+    <p class="description">${webApp[1]}</p>
+    <img src="./img/appLogos/${webApp[0].toLowerCase().replace(/ /g, "-")}.png" alt="">`;
+    document.querySelector(".web-apps").appendChild(newWebApp);
+  });
+
+  let webAppElements = document.querySelectorAll(".web-apps .container");
+
+  webAppElements.forEach(app => {
+    let smallestIndex = 0;
+
+    for (let i = 1; i < columns.length; i++) {
+      if (columns[i].getBoundingClientRect().height < columns[smallestIndex].getBoundingClientRect().height) {
+        smallestIndex = i;
+      }
+    }
+
+    columns[smallestIndex].appendChild(app);
+  });
+}
+
 async function loadRepositories()
 {
-  let numberOfColumns = 3;
-
   for (let i = 0; i < numberOfColumns; i++) {
     let newColumn = document.createElement("div");
     newColumn.className = "column";
     document.querySelector(".repositories").appendChild(newColumn);
   }
 
-  let columns = document.querySelectorAll(".repositories .column")
+  let columns = document.querySelectorAll(".repositories .column");
   let repositories = await fetchRepositories();
 
   repositories.forEach(repository => {
@@ -52,6 +110,8 @@ async function loadRepositories()
     
     columns[smallestIndex].appendChild(newContainer);
   });
+
+  hoverableElement(document.querySelectorAll(".repositories .container"));
 }
 
 async function fetchRepositories() {
@@ -59,4 +119,25 @@ async function fetchRepositories() {
   const repositories = await response.json();
   
   return repositories;
+}
+
+async function updateProjects()
+{
+  if (numberOfColumns != Math.ceil(document.querySelector(".projects-container").getBoundingClientRect().width / defaultcolumnWidth)) {
+    numberOfColumns = Math.ceil(document.querySelector(".projects-container").getBoundingClientRect().width / defaultcolumnWidth);
+
+    document.querySelectorAll(".column").forEach(project => {
+      project.remove();
+    });
+
+    loadProjects();
+    loadWebApps();
+    await loadRepositories();
+  }
+
+  let columns = document.querySelectorAll(".column");
+
+  columns.forEach(column => {
+    column.style.width = `calc((${column.parentElement.getBoundingClientRect().width}px - ((${numberOfColumns} - 1) * 2rem)) / ${numberOfColumns})`;
+  });
 }

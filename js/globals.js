@@ -1,11 +1,12 @@
 // Variables
 let cursorX = 0;
 let cursorY = 0;
+let pointerCursorSize = "4rem";
 
 function globalOnLoad() {
   let fadingScreen = document.querySelector("#fading-screen");
-  setTimeout(() => { fadingScreen.style.opacity = "0"; }, 10);
-  setTimeout(() => { fadingScreen.remove(); }, 310);
+  setTimeout(() => { fadingScreen.style.opacity = "0"; document.body.style.overflow = "hidden"; window.scrollTo(0, 0) }, 10);
+  setTimeout(() => { fadingScreen.remove(); document.body.removeAttribute("style"); }, 310);
 
   longest = 0;
 
@@ -22,7 +23,6 @@ function globalOnLoad() {
 {
   const cursor = document.querySelector("#cursor");
   let firstCursorMove = true;
-  let pointerCursorSize = "4rem";
 
   document.addEventListener("mousemove", updateCursor);
 
@@ -32,22 +32,14 @@ function globalOnLoad() {
       cursor.style.opacity = 1;
     }
 
-    cursorX = event.pageX;
-    cursorY = event.pageY;
+    cursorX = event.clientX;
+    cursorY = event.clientY;
 
     cursor.style.left = cursorX + "px";
     cursor.style.top = cursorY + "px";
   }
 
-  document.querySelectorAll("a, button, .projects .container, .repositories .container").forEach(element => {
-    element.addEventListener("mouseenter", () => {
-      cursor.style.width = pointerCursorSize;
-    });
-    
-    element.addEventListener("mouseleave", () => {
-      cursor.style.width = "";
-    });
-  });
+  hoverableElement(document.querySelectorAll("a, button, .projects-container .container"));
 }
 
 document.querySelectorAll(".menu a").forEach(element => {
@@ -62,6 +54,18 @@ document.querySelectorAll(".menu a").forEach(element => {
     setTimeout(() => { document.location.href = event.target.getAttribute("href"); }, 710);
   });
 });
+
+function hoverableElement(elements) {
+  elements.forEach(element => {
+    element.addEventListener("mouseenter", () => {
+      cursor.style.width = pointerCursorSize;
+    });
+    
+    element.addEventListener("mouseleave", () => {
+      cursor.style.width = "";
+    });
+  });
+}
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);

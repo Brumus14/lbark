@@ -19,6 +19,10 @@ https://stackoverflow.com/questions/4659549/maintain-git-repo-inside-another-git
 
 when hovered over text centre circle smaller and vertical line gets bigger
 
-boidy width to 100% instead of 100vw to remove horizontal scrollbar
+nav transitions from the top onload
+
+secret code that takes you to easter egg
+
+little secrets
 
 nerd font not loading on first time
