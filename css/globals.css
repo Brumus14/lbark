@@ -10,9 +10,13 @@
 
 :root {
   --menuItemWidth: 9ch;
-  --backgroundColour: #2C3333;
-  --secondaryColour: #395B64;
-  --highlightColour: #A5C9CA;
+  --backgroundColour: #222831;
+  --secondaryColour: #393E46;
+  --secondaryColour-high: rgb(73, 80, 90);
+  --highlightColour1: #00ADB5;
+  --highlightColour2: #004e52;
+  --highlightColour2-low: rgba(0, 173, 181, 0.15);
+  --highlightColour2-med: rgba(0, 173, 181, 0.4);
 }
 
 * {
@@ -34,7 +38,7 @@ body {
 }
 
 #selected {
-  color: var(--highlightColour);
+  color: var(--highlightColour1);
 }
 
 .cursor-container {
@@ -95,11 +99,11 @@ body {
 }
 
 .menu a:hover {
-  color: #30445a;
+  color: var(--highlightColour2-low);
 }
 
 .menu a:focus {
-  color: #39638d;
+  color: var(--highlightColour2-med);
 }
 
 #fading-screen {

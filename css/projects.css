@@ -47,7 +47,7 @@ body {
 
 .container:hover {
   transform: scale(1.03);
-  background-color: rgb(58, 58, 58);
+  background-color: var(--secondaryColour-high);
 }
 
 .container p {
