@@ -37,6 +37,8 @@ function loadProjects()
 
     columns[smallestIndex].appendChild(project);
   });
+
+  hoverableElement(document.querySelectorAll(".projects .container"));
 }
 
 function loadWebApps()
@@ -82,6 +84,8 @@ function loadWebApps()
 
     columns[smallestIndex].appendChild(app);
   });
+
+  hoverableElement(document.querySelectorAll(".web-apps .container"));
 }
 
 async function loadRepositories()

@@ -11,8 +11,10 @@
     <title>lBark</title>
   </head>
   <body onload="globalOnLoad();">
-    <div id="fading-screen" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #262626; transition: opacity 0.3s ease-in-out; opacity: 1; z-index: 999;"></div>
-    <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
+    <div id="fading-screen"></div>
+    <div class="cursor-container">
+      <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
+    </div>
     <div class="menu">
       <a href="./index.html" draggable="false">Home</a>
       <a href="./projects.html" draggable="false">Projects</a>
@@ -22,7 +24,8 @@
       <div class="hero">
         <img class="avatar" src="./img/Avatar.png" alt="">
         <div class="speechbox">
-          <img class="triangle" src="./img/Triangle.svg" alt="">
+          <!-- <img class="triangle" src="./img/Triangle.svg" alt=""> -->
+          <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><path d="M160 0v160H48.284a20 20 0 0 1-14.142-34.142L160 0z"/></svg>
           <p>Hi, I'm Luke and I enjoy computer science.</p>
         </div>
       </div>

@@ -3,8 +3,16 @@
   src: url('../fonts/SymbolsNerdFontMono-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Anonymous Pro Bold';
+  src: url('../fonts/Anonymous_Pro/AnonymousPro-Bold.ttf') format('truetype');
+}
+
 :root {
   --menuItemWidth: 9ch;
+  --backgroundColour: #2C3333;
+  --secondaryColour: #395B64;
+  --highlightColour: #A5C9CA;
 }
 
 * {
@@ -22,10 +30,11 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
+  background-color: var(--backgroundColour);
 }
 
 #selected {
-  color: #4381C1;
+  color: var(--highlightColour);
 }
 
 .cursor-container {
@@ -69,8 +78,8 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #262626;
-  background-color: #2F2F2F;
+  color: var(--backgroundColour);
+  background-color: var(--secondaryColour);
   font-family: "Ubuntu Mono";
   font-weight: bold;
   letter-spacing: 0.3rem;
@@ -86,9 +95,31 @@ body {
 }
 
 .menu a:hover {
-  color: #30445A;
+  color: #30445a;
 }
 
 .menu a:focus {
-  color: #39638D;
+  color: #39638d;
+}
+
+#fading-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backgroundColour);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  z-index: 999;
+}
+
+#circle-screen {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--backgroundColour);
+  border-radius: 50%;
+  transition: transform 0.7s ease-in-out;
+  transform: scale(0);
 }

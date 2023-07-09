@@ -47,9 +47,11 @@ document.querySelectorAll(".menu a").forEach(element => {
     event.preventDefault();
 
     let circle = document.createElement("div");
+    circle.setAttribute("id", "circle-screen");
     document.body.appendChild(circle);
-    circle.style.cssText = `position: absolute; left: ${event.pageX - 50}px; top: ${event.pageY - 50}px; width: 10rem; height: 10rem; background-color: #262626; border-radius: 50%; transition: transform 0.7s ease-in-out; transform: scale(0);`;
-    
+    circle.style.left = `${event.pageX - 50}px`;
+    circle.style.top = `${event.pageY - 50}px`;
+
     setTimeout(() => { circle.style.transform = "scale(50)"; document.querySelector("#cursor").style.opacity = "0"; document.body.style.overflow = "hidden"; }, 10);
     setTimeout(() => { document.location.href = event.target.getAttribute("href"); }, 710);
   });
