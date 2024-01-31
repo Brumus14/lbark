@@ -37,10 +37,6 @@ body {
   background-color: var(--backgroundColour);
 }
 
-#selected {
-  color: var(--highlightColour1);
-}
-
 .cursor-container {
   position: fixed;
   overflow: hidden;
@@ -65,7 +61,7 @@ body {
   z-index: 1;
 }
 
-.menu {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,7 +73,36 @@ body {
   font-size: 5rem;
 }
 
-.menu a {
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 500px;
+  top: 500px;
+  color: #00ADB5;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin: 5rem 2rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 60vw;
+  height: 10vh;
+  padding-top: 2rem;
+  font-size: 5rem;
+}
+
+.nav-list a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,12 +123,16 @@ body {
   -ms-user-select: none;
 }
 
-.menu a:hover {
+.nav-list a:hover {
   color: var(--highlightColour2-low);
 }
 
-.menu a:focus {
+.nav-list a:focus {
   color: var(--highlightColour2-med);
+}
+
+#selected {
+  color: var(--highlightColour1);
 }
 
 #fading-screen {
@@ -126,4 +155,17 @@ body {
   border-radius: 50%;
   transition: transform 0.7s ease-in-out;
   transform: scale(0);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+@media (pointer:none) {
+  #cursor {
+    opacity: 0;
+  }
 }

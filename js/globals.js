@@ -10,7 +10,7 @@ function globalOnLoad() {
 
   longest = 0;
 
-  document.querySelectorAll(".menu a").forEach(item => {
+  document.querySelectorAll(".nav-list a").forEach(item => {
     if (item.innerText.length > longest) {
       longest = item.innerText.length;
     }
@@ -42,7 +42,7 @@ function globalOnLoad() {
   hoverableElement(document.querySelectorAll("a, button, .projects-container .container"));
 }
 
-document.querySelectorAll(".menu a").forEach(element => {
+document.querySelectorAll(".nav-list a").forEach(element => {
   element.addEventListener("click", (event) => {
     event.preventDefault();
 

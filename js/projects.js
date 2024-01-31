@@ -44,13 +44,13 @@ function loadProjects()
 function loadWebApps()
 {
   let webAppData = [
-    ["Rollr", "An adjustable dice simulator"],
-    ["Stimer", "A timer"],
-    ["Genn", "Secure password generator"],
-    ["Rring", "A simple alarm"],
-    ["VCtimer", "A Rubiks cube timer with stats"],
-    ["Numer", "A basic easy to use calculator"],
-    ["Klick", "A minimal cps tester"],
+    ["Rollr", "An adjustable dice simulator", "rollr"],
+    ["Stimer", "A timer", "stimer"],
+    ["Genn", "Secure password generator", "genn"],
+    ["Rring", "A simple alarm", "rring"],
+    ["VCtimer", "A Rubiks cube timer with stats", "vctimer"],
+    ["Numer", "A basic easy to use calculator", "numer"],
+    ["Klick", "A minimal cps tester", "klick"],
   ];
 
   for (let i = 0; i < numberOfColumns; i++) {
@@ -69,6 +69,10 @@ function loadWebApps()
     <p class="description">${webApp[1]}</p>
     <img src="./img/appLogos/${webApp[0].toLowerCase().replace(/ /g, "-")}.png" alt="">`;
     document.querySelector(".web-apps").appendChild(newWebApp);
+
+    newWebApp.addEventListener("click", () => {
+      window.open(`https://${webApp[2]}.netlify.app`);
+    });
   });
 
   let webAppElements = document.querySelectorAll(".web-apps .container");
@@ -113,6 +117,10 @@ async function loadRepositories()
     newContainer.innerHTML = `<p class="title">${repository.name}</p><p class=description>${repository.description}</p>`;
     
     columns[smallestIndex].appendChild(newContainer);
+
+    newContainer.addEventListener("click", () => {
+      window.open(`${repository.html_url}`);
+    });
   });
 
   hoverableElement(document.querySelectorAll(".repositories .container"));
