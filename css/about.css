@@ -65,3 +65,27 @@ footer a {
   text-decoration: none;
   color: #248232;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 1800px) {
+  .avatar {
+    display: none;
+    justify-content: center;
+  }
+
+  .hero {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .speechbox p {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .speechbox p {
+    font-size: 2rem;
+  }
+}

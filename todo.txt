@@ -16,3 +16,19 @@ secret code that takes you to easter egg
 little secrets
 
 nerd font not loading on first time
+
+
+
+old burger animation:
+
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(1.75rem) rotateZ(-45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-1.75rem) rotateZ(45deg);
+}
