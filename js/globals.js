@@ -66,7 +66,9 @@ document.querySelectorAll(".nav-list a").forEach(element => {
     event.preventDefault();
 
     circleEnlarge(event.pageX - 50, event.pageY - 50, true);
-    document.querySelectorAll("#circle-screen")[1].style.zIndex = 5;
+
+    let circles = document.querySelectorAll("#circle-screen");
+    circles[circles.length - 1].style.zIndex = 5;
     document.querySelector("#cursor").style.opacity = "0";
 
     setTimeout(() => { document.location.href = event.target.getAttribute("href"); }, 710);
