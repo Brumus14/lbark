@@ -31,7 +31,7 @@ function globalOnLoad() {
     }
 
     else {
-      circleEnlarge(event.pageX - 50, event.pageY - 50);
+      circleEnlarge(event.pageX - 50, event.pageY - 50, false);
     }
 
     navToggleElement.classList.toggle("active");
@@ -65,22 +65,22 @@ document.querySelectorAll(".nav-list a").forEach(element => {
   element.addEventListener("click", (event) => {
     event.preventDefault();
 
-    circleEnlarge(event.pageX - 50, event.pageY - 50);
+    circleEnlarge(event.pageX - 50, event.pageY - 50, true);
+    document.querySelectorAll("#circle-screen")[1].style.zIndex = 5;
     document.querySelector("#cursor").style.opacity = "0";
 
     setTimeout(() => { document.location.href = event.target.getAttribute("href"); }, 710);
   });
 });
 
-function circleEnlarge(positionX, positionY) {
-  let circle = document.querySelector("#circle-screen");
-
-  if (circle == null) {
+function circleEnlarge(positionX, positionY, newCircle) {
+  let circle = document.querySelector("#circle-screen");;
+  
+  if (newCircle || circle == null) {
     circle = document.createElement("div");
-    circle.setAttribute("id", "circle-screen");
+    circle.id = "circle-screen";
     document.body.appendChild(circle);
   }
-
 
   circle.style.left = `${positionX}px`;
   circle.style.top = `${positionY}px`;
@@ -92,7 +92,6 @@ function circleEnlarge(positionX, positionY) {
 }
 
 function circleShrink() {
-  console.log("sdf");
   let circle = document.querySelector("#circle-screen");
 
   circle.style.transform = "";
