@@ -70,7 +70,6 @@ body {
   height: 10vh;
   padding-top: 2rem;
   font-size: 5rem;
-  overflow-x: hidden;
 }
 
 .nav-toggle {
@@ -206,10 +205,11 @@ body {
     left: 50%;
     top: 50vh;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 100vw;
     height: auto;
     padding: 0;
     z-index: 3;
+    overflow: hidden;
   }
 
   .nav-list a {

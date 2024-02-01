@@ -96,7 +96,8 @@ function circleShrink() {
   let circle = document.querySelector("#circle-screen");
 
   circle.style.transform = "";
-  document.body.style.overflow = "";
+
+  setTimeout(() => { document.body.style.overflow = ""; }, 710);
 }
 
 function hoverableElement(elements) {
