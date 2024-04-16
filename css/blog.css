@@ -17,10 +17,21 @@ body {
   transition: width 1s, height 1s;
   background-color: var(--backgroundColour);
   z-index: 3;
+  padding: 0 20vw;
+  overflow: scroll;
+}
+
+.blog-title {
+  font-size: 5rem !important;
+  font-weight: bold;
+  margin: 4rem 0 6rem 0 !important;
 }
 
 .blog p {
+  font-family: "Lato";
   font-size: 3rem;
+  color: #c2c2c2;
+  margin: 6rem 0;
 }
 
 .blog code {

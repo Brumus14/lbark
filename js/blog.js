@@ -1,4 +1,4 @@
-let blogNames = [["Little Man Computer Interpreter", "Programming | Rust", "15/04/2024", "LMCI"]];
+let blogData = [["Little Man Computer Interpreter", "Programming | Rust", "15/04/2024", "LMCI"]];
 
 async function loadBlogs() {
   const blogs = await fetchBlogs();
@@ -10,9 +10,9 @@ async function loadBlogs() {
 
     let newBlog = document.createElement("div");
     newBlog.className = "blog-item";
-    newBlog.innerHTML = `<p class="blog-title">${blogNames[blogIndex][0]}</p><p class="blog-tags">${blogNames[blogIndex][1]}</p><p class="blog-date">${blogNames[blogIndex][2]}</p>`
+    newBlog.innerHTML = `<p class="blog-title">${blogData[blogIndex][0]}</p><p class="blog-tags">${blogData[blogIndex][1]}</p><p class="blog-date">${blogData[blogIndex][2]}</p>`
 
-    let blogName = blogNames[blogIndex][3];
+    let blogName = blogData[blogIndex][3];
 
     newBlog.addEventListener("click", () => {
       displayBlog(blogName);
@@ -27,7 +27,7 @@ async function loadBlogs() {
 }
 
 async function fetchBlogs() {
-  let promises = blogNames.map(async (blogName) => {
+  let promises = blogData.map(async (blogName) => {
     let response = await fetch("blogs/" + blogName + ".md");
     return response.text();
   });
@@ -58,18 +58,19 @@ function hideBlog() {
 }
 
 async function parseBlog(blogName) {
+  let blogDataIndex = 0;
+
+  for (let i = 0; i < blogData.length; i++) {
+    if (blogData[i].includes(blogName)) {
+      blogDataIndex = i;
+      break;
+    }
+  }
+
   let blog = await fetchBlog(blogName);
-  let parsedBlog = "";
+  let parsedBlog = `<p class="blog-title">${blogData[blogDataIndex][0]}</p>`;
 
-  // let blogLines = blog.split("\n").map(line => line.trim());
-  // blogLines = blogLines.slice(4, blogLines.length);
-  // console.log(blogLines);
-
-  // parsedBlog = `<p>${blogLines.join("<br>")}</p>`;
-
-  // console.log(parsedBlog);
-
-  parsedBlog = marked.parse(blog);
+  parsedBlog += marked.parse(blog);
 
   return parsedBlog;
 }
