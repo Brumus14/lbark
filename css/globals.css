@@ -198,7 +198,7 @@ body {
 }
 
 /* Media Queries */
-@media only screen and (min-width: 1501px) {
+@media only screen and (min-width: 1681px) {
   .nav-list a {
     transform: translateY(-350%);
   }
@@ -208,7 +208,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1680px) {
   .nav-toggle {
     display: flex;
   }

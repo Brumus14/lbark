@@ -42,7 +42,7 @@ async function displayBlog(blogName) {
 
   blogElement.style.display = "flex";
 
-  blogElement.innerHTML = await parseBlog(blogName);
+  blogElement.innerHTML += await parseBlog(blogName);
 
   blogElement.querySelectorAll("code").forEach(code => {
     if (code.className == "") {
