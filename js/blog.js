@@ -1,4 +1,5 @@
-let blogData = [["Little Man Computer Interpreter", "Programming | Rust", "15/04/2024", "LMCI"]];
+let blogData = [["Little Man Computer Interpreter", "Programming | Rust", "15/04/2024", "LMCI"],
+["This is a test", "Test", "16/04/2024", "test"]];
 
 async function loadBlogs() {
   const blogs = await fetchBlogs();

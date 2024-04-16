@@ -8,17 +8,21 @@ body {
 .blog {
   display: none;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   position: absolute;
   top: 0;
   right: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   transition: width 1s, height 1s;
   background-color: var(--backgroundColour);
   z-index: 3;
-  padding: 0 20vw;
-  overflow: scroll;
+  padding: 0 30vw;
+  /* overflow: scroll; */
+}
+
+.blog-title, .blog code, .blog p:has(img) {
+  align-self: center;
 }
 
 .blog-title {
@@ -27,11 +31,29 @@ body {
   margin: 4rem 0 6rem 0 !important;
 }
 
-.blog p {
+.blog p, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";
-  font-size: 3rem;
   color: #c2c2c2;
-  margin: 6rem 0;
+}
+
+.blog p {
+  font-size: 4rem;
+}
+
+.blog h1 {
+  font-size: 4rem;
+}
+
+.blog p {
+  font-size: 4rem;
+}
+
+.blog p {
+  font-size: 4rem;
+}
+
+.blog p {
+  font-size: 4rem;
 }
 
 .blog code {
