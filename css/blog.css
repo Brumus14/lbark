@@ -17,16 +17,18 @@ body {
   transition: width 1s, height 1s;
   background-color: var(--backgroundColour);
   z-index: 3;
-  padding: 0 30vw;
-  /* overflow: scroll; */
 }
 
-.blog-title, .blog code, .blog p:has(img) {
+.blog-content {
+  padding: 0 30vw;
+}
+
+.title, .blog code, .blog p:has(img) {
   align-self: center;
 }
 
-.blog-title {
-  font-size: 5rem !important;
+.title {
+  font-size: 7rem !important;
   font-weight: bold;
   margin: 4rem 0 6rem 0 !important;
 }
@@ -34,26 +36,45 @@ body {
 .blog p, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";
   color: #c2c2c2;
+  margin: 2rem 0;
 }
 
 .blog p {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .blog h1 {
   font-size: 4rem;
 }
 
-.blog p {
-  font-size: 4rem;
+.blog h2 {
+  font-size: 3.75rem;
 }
 
-.blog p {
-  font-size: 4rem;
+.blog h3 {
+  font-size: 3.5rem;
 }
 
-.blog p {
-  font-size: 4rem;
+.blog h4 {
+  font-size: 3.25rem;
+}
+
+.blog h5 {
+  font-size: 3rem;
+}
+
+.blog h6 {
+  font-size: 2.75rem;
+}
+
+.blog pre:has(code) {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 3rem 0;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0 0.5rem;
 }
 
 .blog code {
@@ -62,7 +83,7 @@ body {
 }
 
 .blogs-container {
-  margin: 10vh 0;
+  margin-top: 10vh;
   width: 90vw;
 }
 
