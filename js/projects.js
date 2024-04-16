@@ -1,8 +1,7 @@
 let defaultcolumnWidth = 680;
 let numberOfColumns = Math.ceil(document.querySelector(".projects-container").getBoundingClientRect().width / defaultcolumnWidth);
 
-function loadProjects()
-{
+function loadProjects() {
   let projectData = [
     ["Raycaster", "A basic raycasting program made in C++ with SFML"],
   ];
@@ -41,8 +40,7 @@ function loadProjects()
   hoverableElement(document.querySelectorAll(".projects .container"));
 }
 
-function loadWebApps()
-{
+function loadWebApps() {
   let webAppData = [
     ["Rollr", "An adjustable dice simulator", "rollr"],
     ["Stimer", "A timer", "stimer"],
@@ -92,8 +90,7 @@ function loadWebApps()
   hoverableElement(document.querySelectorAll(".web-apps .container"));
 }
 
-async function loadRepositories()
-{
+async function loadRepositories() {
   for (let i = 0; i < numberOfColumns; i++) {
     let newColumn = document.createElement("div");
     newColumn.className = "column";

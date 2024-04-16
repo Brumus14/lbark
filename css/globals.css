@@ -4,6 +4,21 @@
 }
 
 @font-face {
+  font-family: 'Jet Brains Mono';
+  src: url('../fonts/JetBrainsMono/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Anonymous Pro Bold';
   src: url('../fonts/Anonymous_Pro/AnonymousPro-Bold.ttf') format('truetype');
 }
@@ -66,7 +81,7 @@ body {
   justify-content: center;
   position: absolute;
   top: 0;
-  width: 60vw;
+  width: 70vw;
   height: 10vh;
   padding-top: 2rem;
   font-size: 5rem;
@@ -119,7 +134,7 @@ body {
   justify-content: space-between;
   position: absolute;
   top: 0;
-  width: 60vw;
+  width: 70vw;
   height: 10vh;
   padding-top: 2rem;
   font-size: 5rem;

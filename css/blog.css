@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.blog {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: width 1s, height 1s;
+  background-color: var(--backgroundColour);
+  z-index: 3;
+}
+
+.blog p {
+  font-size: 3rem;
+}
+
+.blog code {
+  font-family: "Jet Brains Mono";
+  font-size: 2rem;
+}
+
+.blogs-container {
+  margin: 10vh 0;
+  width: 90vw;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s, background-color 1s;
+  background-color: var(--secondaryColour);
+  padding: 4rem;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  transform-origin: center center;
+  height: min-content;
+}
+
+.blog-item:hover {
+  transform: scale(1.01);
+  background-color: var(--secondaryColour-high);
+}
+
+.blog-title {
+  font-family: 'Ubuntu Mono';
+  font-size: 4rem;
+  color: #c2c2c2;
+  padding-bottom: 1rem;
+}
+
+.blog-tags {
+  font-family: 'Lato';
+  font-size: 2rem;
+  color: #c2c2c26e;
+}
+
+.blog-date {
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-family: 'Lato';
+  font-size: 4rem;
+  color: #c2c2c26e;
+}

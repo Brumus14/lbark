@@ -7,13 +7,16 @@
     <meta name="keywords" content="Brumus14, Luke Barkess, Code, Programming, Index, Projects">
     <meta name="description" content="My personal website" />
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lato&family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./prism.css" />
     <link rel="stylesheet" href="./css/globals.css" />
-    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
+    <script src="./prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="./js/globals.js" defer></script>
-    <script src="./js/projects.js" defer></script>
-    <title>lBark | Projects</title>
+    <script src="./js/blog.js" defer></script>
+    <title>lBark | Blog</title>
   </head>
-  <body onresize="updateProjects();" onload="globalOnLoad();loadProjects();loadWebApps();loadRepositories();updateProjects();">
+  <body onload="globalOnLoad();loadBlogs();">
     <div id="fading-screen"></div>
     <div class="cursor-container">
       <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
@@ -27,24 +30,12 @@
       </div>
       <div class="nav-list">
         <a href="./index.html" draggable="false">Home</a>
-        <a href="" id="selected" draggable="false">Projects</a>
-        <a href="./blog.html" draggable="false">Blog</a>
+        <a href="./projects.html" draggable="false">Projects</a>
+        <a href="" id="selected" draggable="false">Blog</a>
         <a href="./about.html" draggable="false">About</a>
       </div>
     </nav>
-    <div class="projects-container">
-      <p class="projects-title"><span>󰉋</span> projects</p>
-      <div class="projects">
-      </div>
-    </div>
-    <div class="projects-container">
-      <p class="projects-title"><span>󰖟</span> web apps</p>
-      <div class="web-apps"></div>
-    </div>
-    <div class="projects-container">
-      <p class="projects-title"><span></span> repos</p>
-      <div class="repositories">
-      </div>
-    </div>
+    <div class="blog"></div>
+    <div class="blogs-container"></div>
   </body>
 </html>
