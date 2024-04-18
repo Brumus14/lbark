@@ -38,9 +38,10 @@ async function fetchBlog(blogName) {
 }
 
 async function displayBlog(blogName) {
+  let blogContainerElement = document.querySelector(".blog-container");
   let blogElement = document.querySelector(".blog");
 
-  blogElement.style.display = "flex";
+  blogContainerElement.style.display = "flex";
 
   blogElement.innerHTML += await parseBlog(blogName);
 

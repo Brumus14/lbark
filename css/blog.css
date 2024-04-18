@@ -5,37 +5,65 @@ body {
   padding-top: 10vh;
 }
 
-.blog {
+.blog-container {
   display: none;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   position: absolute;
-  top: 0;
+  top: 12vh;
   right: 0;
   width: 100vw;
-  min-height: 100vh;
-  transition: width 1s, height 1s;
+  min-height: 88vh;
   background-color: var(--backgroundColour);
   z-index: 3;
 }
 
-.blog-content {
-  padding: 0 30vw;
+.blog {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  min-height: 88vh;
+  transition: width 1s, height 1s;
+  background-color: var(--backgroundColour-low);
+  border-radius: 2rem;
+  margin: 6rem 0;
+  padding: 6rem;
 }
 
 .title, .blog code, .blog p:has(img) {
   align-self: center;
 }
 
+.blog p:has(img) {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-content > *:first-child {
+  margin-top: 0;
+}
+
+.blog-content > *:last-child {
+  margin-bottom: 0;
+}
+
 .title {
   font-size: 7rem !important;
   font-weight: bold;
-  margin: 4rem 0 6rem 0 !important;
+  margin-bottom: 6rem !important;
+  background-color: var(--backgroundColour);
+  width: calc(50vw - 12rem);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2rem 0;
 }
 
 .blog p, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";
-  color: #c2c2c2;
+  color: var(--light);
+}
+
+.blog p:not(.title), h1, h2, h3, h4, h5, h6 {
   margin: 2rem 0;
 }
 
@@ -71,10 +99,12 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   margin: 3rem 0;
+  background-color: var(--backgroundColour);
 }
 
 :not(pre) > code[class*="language-"] {
   padding: 0 0.5rem;
+  background-color: var(--backgroundColour);
 }
 
 .blog code {
@@ -109,14 +139,14 @@ body {
 .blog-title {
   font-family: 'Ubuntu Mono';
   font-size: 4rem;
-  color: #c2c2c2;
+  color: var(--light);
   padding-bottom: 1rem;
 }
 
 .blog-tags {
   font-family: 'Lato';
   font-size: 2rem;
-  color: #c2c2c26e;
+  color: var(--light-low);
 }
 
 .blog-date {
@@ -126,5 +156,5 @@ body {
   transform: translate(0%, -50%);
   font-family: 'Lato';
   font-size: 4rem;
-  color: #c2c2c26e;
+  color: var(--light-low);
 }
