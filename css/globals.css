@@ -38,7 +38,7 @@
 }
 
 ::selection {
-  background: black;
+  background: var(--highlightColour1);
 }
 
 * {
