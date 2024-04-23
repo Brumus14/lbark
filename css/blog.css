@@ -47,7 +47,7 @@ body {
   margin-bottom: 0;
 }
 
-.title {
+.blog .title {
   font-size: 7rem !important;
   font-weight: bold;
   margin-bottom: 6rem !important;
@@ -55,7 +55,7 @@ body {
   width: calc(50vw - 12rem);
   text-align: center;
   border-radius: 1rem;
-  padding: 2rem 0;
+  padding: 2rem 4rem;
 }
 
 .blog p, h1, h2, h3, h4, h5, h6 {
@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu Mono';
   font-size: 4rem;
   color: var(--light);
-  padding-bottom: 1rem;
+  padding: 0 25rem 1rem 0;
 }
 
 .blog-tags {
@@ -170,4 +170,70 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato';
   font-size: 4rem;
   color: var(--light-low);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1680px) {
+  .blog {
+    width: 75vw;
+  }
+
+  .blog .title {
+    width: calc(75vw - 12rem);
+    font-size: 4rem !important;
+  }
+
+  .blog p, .blog code {
+    font-size: 1.5rem;
+  }
+  
+  .blog h1 {
+    font-size: 3rem;
+  }
+  
+  .blog h2 {
+    font-size: 2.75rem;
+  }
+  
+  .blog h3 {
+    font-size: 2.5rem;
+  }
+  
+  .blog h4 {
+    font-size: 2.25rem;
+  }
+  
+  .blog h5 {
+    font-size: 2rem;
+  }
+  
+  .blog h6 {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .blog-title {
+    font-size: 3rem;
+    padding: 0 0 1rem 0;
+  }
+
+  .blog-tags {
+    font-size: 2rem;
+  }
+
+  .blog-date {
+    position: static;
+    font-size: 2rem;
+    transform: none;
+  }
+
+  .blog {
+    width: 90vw;
+    padding: 3rem;
+  }
+
+  .blog .title {
+    width: calc(90vw - 6rem);
+  }
 }
