@@ -58,7 +58,7 @@ body {
   padding: 2rem 4rem;
 }
 
-.blog p, h1, h2, h3, h4, h5, h6 {
+.blog p, .blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6, .blog ul, .blog ol, .blog table th, .blog table td {
   font-family: "Lato";
   color: var(--light);
 }
@@ -98,6 +98,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog h6 {
   font-size: 2.75rem;
+}
+
+.blog ul, .blog ol {
+  font-size: 2rem;
+  list-style-position: inside;
+}
+
+.blog table {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.blog table th, .blog table td {
+  background-color: var(--backgroundColour);
+  border: var(--backgroundColour-low) 0.25rem solid;
+  padding: 1rem 1.5rem;
+  margin: 10rem;
+  border-radius: 1rem;
+}
+
+.blog table th {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.blog table td {
+  font-size: 2rem;
 }
 
 .blog hr {
