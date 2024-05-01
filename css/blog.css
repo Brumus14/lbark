@@ -105,8 +105,19 @@ h1, h2, h3, h4, h5, h6 {
   list-style-position: inside;
 }
 
+.blog ol {
+  list-style-type: none;
+}
+
+.blog ol li {
+  counter-increment: list-counter;
+}
+
+.blog ol li::marker {
+  content: counter(list-counter) ")\00a0\00a0";
+}
+
 .blog table {
-  width: 100%;
   margin: 3rem 0;
 }
 

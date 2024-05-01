@@ -8,25 +8,25 @@ It is a bit inconventient to have to write a program in just number instruction 
 
 LMC has eleven total mnemonics that can be used. Ten of which are used during execution and are listed below.
 
-| Mnemonic      | Number Code   | Description |
-| :-----------: | :-----------: | :---------- |
-| ADD | 1XX | Adds the value at location XX to the accumulator |
-| SUB | 2XX | Subtracts the value at location XX from the accumulator |
-| STA | 3XX | Stores the value currently in the accumulator to location XX |
-| LDA | 5XX | Loads the value at location XX into the accumulator |
-| BRA | 6XX | Sets the program counter to XX |
-| BRZ | 7XX | Sets the program counter to XX if the accumulator is zero |
-| BRP | 8XX | Sets the program counter to XX if the accumulator is zero or positive |
-| INP | 901 | Sets the accumulator to a value inputted |
-| OUT | 902 | Outputs the value in the accumulator |
+| Mnemonic      | Number Code   | Description                                                           |
+| :-----------: | :-----------: | :-------------------------------------------------------------------- |
+| ADD           | 1XX           | Adds the value at location XX to the accumulator                      |
+| SUB           | 2XX           | Subtracts the value at location XX from the accumulator               |
+| STA           | 3XX           | Stores the value currently in the accumulator to location XX          |
+| LDA           | 5XX           | Loads the value at location XX into the accumulator                   |
+| BRA           | 6XX           | Sets the program counter to XX                                        |
+| BRZ           | 7XX           | Sets the program counter to XX if the accumulator is zero             |
+| BRP           | 8XX           | Sets the program counter to XX if the accumulator is zero or positive |
+| INP           | 901           | Sets the accumulator to a value inputted                              |
+| OUT           | 902           | Outputs the value in the accumulator                                  |
 
 Finally the `DAT` mnemonic is only used by the parser and it just loads a number into the memory location instead of the instruction number code.
 
-To execute a program on the LMC it follows the following steps:
-1. Fetch the instruction from the location of the program counters value
-2. Increment the program counter
-3. Decode the the instruction into its opcode and operand
-4. Execute the instruction
+To execute a program on the LMC does these steps:
+1) Fetch the instruction from the location of the program counters value
+2) Increment the program counter
+3) Decode the the instruction into its opcode and operand
+4) Execute the instruction
 
 ## Parser
 
@@ -45,5 +45,27 @@ DAT 10
 
 The parser will need to use each line in the source that isn't whitespace and convert it into a number code that the executor can decode and execute.
 
+Lines are made up of two possible sections (ignoring labels for now):
+
+```
+| Instruction | Data |
+```
+
+Each line can be split up into each section and the instruction can be identified, and then converted into its number code also using the data section if the instruction requires it.
+
+In the previous example it would be converted to number codes to produce:
+
+| Source | Number Code |
+| :----- | :---------- |
+| INP    | 901         |
+| STA 4  | 304         |
+| ADD 5  | 105         |
+| OUT    | 902         |
+| DAT    | 000         |
+| DAT 10 | 010         |
+
+### Labels
+
+Labels can act as another section in a source line at the start and so 
 
 ## Executor
