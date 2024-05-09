@@ -27,14 +27,15 @@
   --menuItemWidth: 9ch;
   --backgroundColour: #222831;
   --backgroundColour-low: #191D24;
-  --secondaryColour: #393E46;
-  --secondaryColour-high: rgb(73, 80, 90);
-  --highlightColour1: #00ADB5;
-  --highlightColour2: #004e52;
-  --highlightColour2-low: rgba(0, 173, 181, 0.15);
-  --highlightColour2-med: rgba(0, 173, 181, 0.4);
-  --light: #c2c2c2;
-  --light-low: #c2c2c26e;
+  --secondaryColour: #374045;
+  --secondaryColour-high: #49545A;
+  --highlightColour1: #3E91A8;
+  --highlightColour2: #30475E;
+  --highlightColour2-med: #305D6D;
+  --highlightColour2-low: #2D505E;
+  --red-highlight: #F05454;
+  --light: #DDDDDD;
+  --light-low: #C2C2C2;
 }
 
 ::selection {
