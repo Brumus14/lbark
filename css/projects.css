@@ -1,89 +1,92 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
 }
 
 .projects-container {
-  margin: 10vh 0;
-  width: 90vw;
+    margin-top: 12vh;
+    width: 90vw;
 }
 
-.projects, .web-apps, .repositories {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
+.projects,
+.web-apps,
+.repositories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
 }
 
 .projects-title {
-  font-family: 'Ubuntu Mono';
-  font-size: 7rem;
-  font-size: bold;
-  color: #248232;
+    font-family: 'Ubuntu Mono';
+    font-size: 7rem;
+    font-size: bold;
+    color: #248232;
 }
 
 .projects-title span {
-  font-family: 'Nerd Font';
+    font-family: 'Nerd Font';
 }
 
 .column {
-  position: relative;
-  height: min-content;
+    position: relative;
+    height: min-content;
 }
 
 .container {
-  position: relative;
-  margin: 2rem 0;
-  border-radius: 2rem;
-  padding: 2rem;
-  transition: transform 0.3s, background-color 1s;
-  backface-visibility: hidden;
-  transform-origin: center center;
-  height: min-content;
-  background-color: var(--secondaryColour);
+    position: relative;
+    margin: 2rem 0;
+    border-radius: 2rem;
+    padding: 2rem;
+    transition: transform 0.3s, background-color 1s;
+    backface-visibility: hidden;
+    transform-origin: center center;
+    height: min-content;
+    background-color: var(--secondaryColour);
 }
 
 .container:hover {
-  transform: scale(1.03);
-  background-color: var(--secondaryColour-high);
+    transform: scale(1.03);
+    background-color: var(--secondaryColour-high);
 }
 
 .container p {
-  color: var(--light);
+    color: var(--light);
 }
 
-.web-apps .title, .web-apps .description {
-  margin-right: 11rem;
+.web-apps .title,
+.web-apps .description {
+    margin-right: 11rem;
 }
 
 .container .title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  font-family: "Lato";
-  font-weight: bold;
-  color: #dfdfdf;
-  overflow: hidden;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: "Lato";
+    font-weight: bold;
+    color: #dfdfdf;
+    overflow: hidden;
 }
 
 .container .description {
-  font-size: 2.5rem;
-  font-family: "Ubuntu Mono";
+    font-size: 2.5rem;
+    font-family: "Ubuntu Mono";
 }
 
 .container img {
-  position: absolute;
-  max-height: 10rem;
-  height: calc(100% - 4rem);
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
+    position: absolute;
+    max-height: 10rem;
+    height: calc(100% - 4rem);
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
 }
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
-  .projects-title {
-    font-size: 5rem;
-  }
+    .projects-title {
+        font-size: 5rem;
+    }
 }

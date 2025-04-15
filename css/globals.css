@@ -1,269 +1,269 @@
 @font-face {
-  font-family: 'Nerd Font';
-  src: url('../fonts/SymbolsNerdFontMono-Regular.ttf') format('truetype');
+    font-family: 'Nerd Font';
+    src: url('../fonts/SymbolsNerdFontMono-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Jet Brains Mono';
-  src: url('../fonts/JetBrainsMono/JetBrainsMono-Regular.ttf') format('truetype');
+    font-family: 'Jet Brains Mono';
+    src: url('../fonts/JetBrainsMono/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Anonymous Pro Bold';
-  src: url('../fonts/Anonymous_Pro/AnonymousPro-Bold.ttf') format('truetype');
+    font-family: 'Anonymous Pro Bold';
+    src: url('../fonts/Anonymous_Pro/AnonymousPro-Bold.ttf') format('truetype');
 }
 
 :root {
-  --menuItemWidth: 9ch;
-  --backgroundColour: #222831;
-  --backgroundColour-low: #191D24;
-  --secondaryColour: #374045;
-  --secondaryColour-high: #49545A;
-  --highlightColour1: #3E91A8;
-  --highlightColour2: #30475E;
-  --highlightColour2-med: #305D6D;
-  --highlightColour2-low: #2D505E;
-  --red-highlight: #F05454;
-  --light: #DDDDDD;
-  --light-low: #C2C2C2;
+    --menuItemWidth: 9ch;
+    --backgroundColour: #222831;
+    --backgroundColour-low: #191D24;
+    --secondaryColour: #374045;
+    --secondaryColour-high: #49545A;
+    --highlightColour1: #3E91A8;
+    --highlightColour2: #30475E;
+    --highlightColour2-med: #305D6D;
+    --highlightColour2-low: #2D505E;
+    --red-highlight: #F05454;
+    --light: #DDDDDD;
+    --light-low: #C2C2C2;
 }
 
 ::selection {
-  background: var(--highlightColour1);
+    background: var(--highlightColour1);
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: transparent;
-  cursor: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    cursor: none;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--backgroundColour);
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--backgroundColour);
 }
 
 .cursor-container {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 6;
-  mix-blend-mode: difference;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 6;
+    mix-blend-mode: difference;
 }
 
 #cursor {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  pointer-events: none;
-  width: 3rem;
-  height: auto;
-  transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
-  mix-blend-mode: difference;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    pointer-events: none;
+    width: 3rem;
+    height: auto;
+    transition: opacity ease-in-out 0.3s, width ease-in-out 0.1s;
+    mix-blend-mode: difference;
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  width: 70vw;
-  height: 12vh;
-  font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 70vw;
+    min-height: 12vh;
+    font-size: 5rem;
 }
 
 .nav-toggle {
-  display: none;
-  flex-direction: column;
-  z-index: 5;
+    display: none;
+    flex-direction: column;
+    z-index: 5;
 }
 
 .nav-toggle span {
-  display: block;
-  width: 5rem;
-  height: 0.75rem;
-  border-radius: 1rem;
-  margin: 0.5rem 0;
-  background-color: var(--highlightColour1);
-  transition: transform ease-in-out 0.3s, opacity ease-in-out 0.2s;
+    display: block;
+    width: 5rem;
+    height: 0.75rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--highlightColour1);
+    transition: transform ease-in-out 0.3s, opacity ease-in-out 0.2s;
 }
 
 .nav-toggle span:nth-child(3) {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
-.nav-toggle.active + .nav-list {
-  pointer-events: all !important;
+.nav-toggle.active+.nav-list {
+    pointer-events: all !important;
 }
 
 .nav-toggle.active span:nth-child(1) {
-  opacity: 0;
-  transform: translateY(1.75rem);
+    opacity: 0;
+    transform: translateY(1.75rem);
 }
 
 .nav-toggle.active span:nth-child(4) {
-  opacity: 0;
-  transform: translateY(-1.75rem);
+    opacity: 0;
+    transform: translateY(-1.75rem);
 }
 
 .nav-toggle.active span:nth-child(2) {
-  transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
 }
 
 .nav-toggle.active span:nth-child(3) {
-  opacity: 1;
-  transform: translate(-50%, -50%) rotateZ(-45deg);
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateZ(-45deg);
 }
 
 .nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  width: 70vw;
-  height: 12vh;
-  font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: absolute; */
+    /* top: 0; */
+    width: 70vw;
+    /* height: 12vh; */
+    font-size: 5rem;
 }
 
 .nav-list a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--backgroundColour);
-  background-color: var(--secondaryColour);
-  font-family: "Ubuntu Mono";
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-  box-sizing: initial;
-  padding: 1rem 2rem;
-  min-width: var(--menuItemWidth);
-  border-radius: 1.5rem;
-  /* transform: translateY(-350%); */
-  transition: color 0.3s ease-in-out, transform 0.7s ease;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--backgroundColour);
+    background-color: var(--secondaryColour);
+    font-family: "Ubuntu Mono";
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    box-sizing: initial;
+    padding: 1rem 2rem;
+    min-width: var(--menuItemWidth);
+    border-radius: 1.5rem;
+    /* transform: translateY(-350%); */
+    transition: color 0.3s ease-in-out, transform 0.7s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .nav-list a:hover {
-  color: var(--highlightColour2-low);
+    color: var(--highlightColour2-low);
 }
 
 .nav-list a:focus {
-  color: var(--highlightColour2-med);
+    color: var(--highlightColour2-med);
 }
 
 #selected {
-  color: var(--highlightColour1);
-  /* transform: translateY(-250%); */
+    color: var(--highlightColour1);
+    /* transform: translateY(-250%); */
 }
 
 #fading-screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--backgroundColour);
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-  z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundColour);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    z-index: 3;
 }
 
 #circle-screen {
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  background-color: var(--backgroundColour);
-  border-radius: 50%;
-  transition: transform 0.7s ease-in-out;
-  transform: scale(0);
-  z-index: 4;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--backgroundColour);
+    border-radius: 50%;
+    transition: transform 0.7s ease-in-out;
+    transform: scale(0);
+    z-index: 4;
 }
 
 /* Media Queries */
 @media only screen and (min-width: 1681px) {
-  .nav-list a {
-    transform: translateY(-350%);
-  }
+    .nav-list a {
+        transform: translateY(-350%);
+    }
 
-  #selected {
-    transform: translateY(-250%);
-  }
+    #selected {
+        transform: translateY(-250%);
+    }
 }
 
 @media only screen and (max-width: 1680px) {
-  .nav-toggle {
-    display: flex;
-  }
+    .nav-toggle {
+        display: flex;
+    }
 
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    top: 50vh;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: auto;
-    padding: 0;
-    z-index: 5;
-    overflow: hidden;
-    pointer-events: none;
-  }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        top: 50vh;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        z-index: 5;
+        overflow: hidden;
+        pointer-events: none;
+    }
 
-  .nav-list a {
-    margin: 2rem 0;
-    transition: transform 0.4s ease-in-out, opacity 0.5s ease-in-out;
-    transform: translate(0, 0);
-    opacity: 0;
-  }
+    .nav-list a {
+        margin: 2rem 0;
+        transition: transform 0.4s ease-in-out, opacity 0.5s ease-in-out;
+        transform: translate(0, 0);
+        opacity: 0;
+    }
 
-  .nav-list a:nth-child(odd) {
-    transform: translateX(-100vw);
-  }
+    .nav-list a:nth-child(odd) {
+        transform: translateX(-100vw);
+    }
 
-  .nav-list a:nth-child(even) {
-    transform: translateX(100vw);
-  }
+    .nav-list a:nth-child(even) {
+        transform: translateX(100vw);
+    }
 
-  .nav-toggle.active + .nav-list a {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    .nav-toggle.active+.nav-list a {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @media (pointer:none) {
-  #cursor {
-    opacity: 0;
-  }
+    #cursor {
+        opacity: 0;
+    }
 }

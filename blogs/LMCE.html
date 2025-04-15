@@ -9,21 +9,21 @@
     <meta name="description" content="My personal website" />
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lato&family=Ubuntu+Mono&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="./prism.css" />
-    <link rel="stylesheet" href="./css/globals.css" />
-    <link rel="stylesheet" href="./css/blog.css" />
-    <script src="./prism.js"></script>
+    <link rel="stylesheet" href="../prism.css" />
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/blog_post.css" />
+    <script src="../prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="./js/globals.js" defer></script>
-    <script src="./js/blog_data.js" defer></script>
-    <script src="./js/blog.js" defer></script>
-    <title>lbark | Blog</title>
+    <script src="../js/globals.js" defer></script>
+    <script src="../js/blog_data.js" defer></script>
+    <script src="../js/blog_post.js" defer></script>
+    <title>lbark | LMCE</title>
 </head>
 
-<body onload="globalOnLoad();loadBlogs();">
+<body onload="globalOnLoad();displayBlog('LMCE');">
     <div id="fading-screen"></div>
     <div class="cursor-container">
-        <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
+        <img id="cursor" style="opacity: 0;" src="../img/Cursor.svg">
     </div>
     <nav class="navbar">
         <div class="nav-toggle">
@@ -33,13 +33,12 @@
             <span></span>
         </div>
         <div class="nav-list">
-            <a href="./index.html" draggable="false">Home</a>
-            <a href="./projects.html" draggable="false">Projects</a>
-            <a href="" id="selected" draggable="false">Blog</a>
-            <a href="./about.html" draggable="false">About</a>
+            <a href="../index.html" draggable="false">Home</a>
+            <a href="../projects.html" draggable="false">Projects</a>
+            <a href="../blog.html" draggable="false">Blog</a>
+            <a href="../about.html" draggable="false">About</a>
         </div>
     </nav>
-    <div class="blogs-container"></div>
 </body>
 
 </html>

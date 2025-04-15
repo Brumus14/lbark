@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Luke Barkess" />
     <meta name="keywords" content="Brumus14, Luke Barkess, Code, Programming, Index, Projects">
     <meta name="description" content="My personal website" />
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lato&family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lato&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/projects.css" />
     <script src="./js/globals.js" defer></script>
     <script src="./js/projects.js" defer></script>
-    <title>lBark | Projects</title>
-  </head>
-  <body onresize="updateProjects();" onload="globalOnLoad();loadProjects();loadWebApps();loadRepositories();updateProjects();">
+    <title>lbark | Projects</title>
+</head>
+
+<body onresize="updateProjects();"
+    onload="globalOnLoad();loadProjects();loadWebApps();loadRepositories();updateProjects();">
     <div id="fading-screen"></div>
     <div class="cursor-container">
-      <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
+        <img id="cursor" style="opacity: 0;" src="./img/Cursor.svg">
     </div>
     <nav class="navbar">
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="nav-list">
-        <a href="./index.html" draggable="false">Home</a>
-        <a href="" id="selected" draggable="false">Projects</a>
-        <a href="./blog.html" draggable="false">Blog</a>
-        <a href="./about.html" draggable="false">About</a>
-      </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-list">
+            <a href="./index.html" draggable="false">Home</a>
+            <a href="" id="selected" draggable="false">Projects</a>
+            <a href="./blog.html" draggable="false">Blog</a>
+            <a href="./about.html" draggable="false">About</a>
+        </div>
     </nav>
     <div class="projects-container">
-      <p class="projects-title"><span>󰉋</span> projects</p>
-      <div class="projects">
-      </div>
+        <p class="projects-title"><span>󰉋</span> projects</p>
+        <div class="projects">
+        </div>
     </div>
     <div class="projects-container">
-      <p class="projects-title"><span>󰖟</span> web apps</p>
-      <div class="web-apps"></div>
+        <p class="projects-title"><span>󰖟</span> web apps</p>
+        <div class="web-apps"></div>
     </div>
     <div class="projects-container">
-      <p class="projects-title"><span></span> repos</p>
-      <div class="repositories">
-      </div>
+        <p class="projects-title"><span></span> repos</p>
+        <div class="repositories">
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
