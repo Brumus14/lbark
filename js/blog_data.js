@@ -5,6 +5,12 @@ let blogData = [
 		"14/04/2025",
 		"LMCE",
 	],
+	[
+		"SHA-256 Implementation",
+		["Programming", "Zig", "Cryptography"],
+		"",
+		"SHA256",
+	],
 	// [
 	// 	"Creating this website",
 	// 	["Programming", "Website Development"],
