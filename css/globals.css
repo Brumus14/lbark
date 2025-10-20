@@ -55,9 +55,10 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background-color: var(--backgroundColour);
+    position: relative;
 }
 
 .cursor-container {
@@ -65,8 +66,8 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: 6;
     mix-blend-mode: difference;
@@ -118,6 +119,10 @@ body {
     margin: 0;
 }
 
+.nav-toggle.active body {
+    overflow: hidden;
+}
+
 .nav-toggle.active+.nav-list {
     pointer-events: all !important;
 }
@@ -166,8 +171,8 @@ body {
     padding: 1rem 2rem;
     min-width: var(--menuItemWidth);
     border-radius: 1.5rem;
-    /* transform: translateY(-350%); */
-    transition: color 0.3s ease-in-out, transform 0.7s ease;
+    animation: nav-slide 0.7s;
+    transition: color 0.3s ease-in-out;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -184,7 +189,7 @@ body {
 
 #selected {
     color: var(--highlightColour1);
-    /* transform: translateY(-250%); */
+    animation: nav-slide 0.65s;
 }
 
 #fading-screen {
@@ -210,18 +215,26 @@ body {
     z-index: 4;
 }
 
-/* Media Queries */
-@media only screen and (min-width: 1681px) {
-    .nav-list a {
-        transform: translateY(-350%);
-    }
+/* Keyframes */
+@keyframes nav-slide {
+    from { transform: translateY(-350%); }
+    to { transform: translateY(0); }
+}
 
-    #selected {
-        transform: translateY(-250%);
+/* Media Queries */
+@media only screen and (max-width: 1680px) {
+    .nav-list {
+        font-size: 4rem;
     }
 }
 
-@media only screen and (max-width: 1680px) {
+@media only screen and (max-width: 1380px) {
+    .nav-list {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
     .nav-toggle {
         display: flex;
     }
@@ -256,14 +269,19 @@ body {
         transform: translateX(100vw);
     }
 
-    .nav-toggle.active+.nav-list a {
+    html:has(.nav-toggle.active) {
+        overflow: hidden;
+    }
+
+    .nav-toggle.active + .nav-list a {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-@media (pointer:none) {
+@media (pointer:coarse) {
     #cursor {
+        display: none;
         opacity: 0;
     }
 }
