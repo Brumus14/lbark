@@ -55,7 +55,7 @@ html {
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-color: var(--backgroundColour);
     position: relative;
@@ -66,7 +66,7 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     pointer-events: none;
     z-index: 6;
@@ -196,7 +196,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: var(--backgroundColour);
     transition: opacity 0.3s ease-in-out;
@@ -257,7 +257,7 @@ body {
         left: 50%;
         top: 50vh;
         transform: translate(-50%, -50%);
-        width: 100vw;
+        width: 100%;
         height: auto;
         padding: 0;
         z-index: 5;
