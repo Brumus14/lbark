@@ -229,12 +229,23 @@ body {
 }
 
 @media only screen and (max-width: 1380px) {
+    .navbar {
+        width: 90vw;
+    }
+
+    .nav-list {
+        width: 90vw;
+    }
+}
+
+
+@media only screen and (max-width: 1120px) {
     .nav-list {
         font-size: 3rem;
     }
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 900px) {
     .nav-toggle {
         display: flex;
     }
