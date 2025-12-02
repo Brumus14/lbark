@@ -37,6 +37,7 @@ LMC uses a very similar syntax to assembly languages which makes it very easy to
 An example program that adds two numbers together:
 
 ```lmc
+// HELLO comment
        INP
        STA first
        INP

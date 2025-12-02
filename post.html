@@ -9,25 +9,28 @@
       content="Brumus14, Luke Barkess, Code, Programming, Index, Projects"
     />
     <meta name="description" content="My personal website" />
-    <link rel="icon" type="image/x-icon" href="img/Avatar.png" />
+    <link rel="icon" type="image/x-icon" href="./img/Avatar.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lato&family=Ubuntu+Mono&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/globals.css" />
-    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/post.css" />
     <script src="./js/globals.js" defer></script>
-    <script src="./js/projects.js" defer></script>
-    <title>lbark | Projects</title>
+    <script src="./js/post.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   </head>
 
   <body
-    onresize="updateProjects()"
     onload="
       globalOnLoad();
-      loadWebApps();
-      loadRepositories();
-      updateProjects();
+      registerCustomHighlightLanguages();
+      loadPost();
     "
   >
     <div id="fading-screen"></div>
@@ -43,23 +46,10 @@
       </div>
       <div class="nav-list">
         <a href="./index.html" draggable="false">Home</a>
-        <a href="" id="selected" draggable="false">Projects</a>
+        <a href="./projects.html" draggable="false">Projects</a>
         <a href="./blog.html" draggable="false">Blog</a>
         <a href="./about.html" draggable="false">About</a>
       </div>
     </nav>
-    <!-- <div class="projects-container"> -->
-    <!--     <p class="projects-title"><span>󰉋</span> projects</p> -->
-    <!--     <div class="projects"> -->
-    <!--     </div> -->
-    <!-- </div> -->
-    <div class="projects-container">
-      <p class="projects-title"><span></span> repos</p>
-      <div class="repositories"></div>
-    </div>
-    <div class="projects-container">
-      <p class="projects-title"><span>󰖟</span> web apps</p>
-      <div class="web-apps"></div>
-    </div>
   </body>
 </html>

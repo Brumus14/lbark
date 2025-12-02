@@ -23,7 +23,7 @@ site_url: https://lbark.netlify.app
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "blog_sources"
+    folder: "posts"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
