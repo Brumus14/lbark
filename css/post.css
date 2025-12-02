@@ -41,7 +41,6 @@ body {
 .blog .title {
   font-size: 7rem !important;
   font-weight: bold;
-  margin-bottom: 6rem !important;
   background-color: var(--backgroundColour);
   width: calc(75vw - 12rem);
   text-align: center;

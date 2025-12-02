@@ -4,13 +4,17 @@ async function loadPost() {
 
     if (name == null) return;
 
-    let blog = await fetch(`./blog/${name}.md`).then((res) => res.text());
-    let parsedBlog = `<div class="blog-content">${marked.parse(blog)}</div>`;
+    let blog = await fetch(`./posts/${name}.md`).then((res) => res.text());
+    let parsedBlog = marked.parse(blog);
 
-    let blogElement = document.createElement("div");
-    blogElement.className = "blog";
-    document.body.appendChild(blogElement);
+    let blogElement = document.querySelector(".blog");
+
+    const data = await getPostData(`${name}.md`);
+    blogElement.innerHTML += `<p class="title">${data[0].slice(1, -1)}</p>`;
+
     blogElement.innerHTML += parsedBlog;
+    blogElement.children[1].remove();
+    blogElement.children[1].remove();
 
     document.querySelectorAll("pre code").forEach((e) => {
         hljs.highlightElement(e);

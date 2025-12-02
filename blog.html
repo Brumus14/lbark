@@ -16,19 +16,18 @@
     />
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/blog.css" />
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <script src="./js/globals.js" defer></script>
-    <script src="./js/blog_data.js" defer></script>
     <script src="./js/blog.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>lbark | Blog</title>
   </head>
 
-  <body onload="globalOnLoad();loadBlogs();">
+  <body
+    onload="
+      globalOnLoad();
+      loadBlogs();
+    "
+  >
     <div id="fading-screen"></div>
     <div class="cursor-container">
       <img id="cursor" style="opacity: 0" src="./img/Cursor.svg" />
