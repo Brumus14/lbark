@@ -1,9 +1,11 @@
 ---
-title: "Hello this is test"
-date: "Yesteryearday"
-tags: ["Zig", "other", "tag"]
+title: Little Man Computer Executor
+date: 2025-12-02T21:51:00.000+00:00
+tags:
+  - Zig
+  - other
+  - tag
 ---
-
 # Introduction
 
 I've been learning the Zig programming language recently and I decided to start my first project, a Little Man Computer (LMC) Executor.
