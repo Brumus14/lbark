@@ -4,6 +4,8 @@ async function loadBlogs() {
     for (const post of posts) {
         const data = await getPostData(post);
 
+        if (data == null) continue;
+
         let newBlog = document.createElement("a");
         newBlog.className = "blog-item";
         newBlog.innerHTML = `
@@ -69,7 +71,10 @@ async function getPosts() {
 async function getPostData(file) {
     const blog = await fetch(`./posts/${file}`).then((res) => res.text());
 
-    const metadata = /^---\n([\s\S]+?)\n---/.exec(blog)[1];
+    const metadata_regex = /^---\n([\s\S]+?)\n---/.exec(blog);
+    if (metadata_regex == null || metadata_regex.length < 1) return null;
+
+    const metadata = metadata_regex[1];
 
     return metadata.split("\n").map((line) => line.split(":")[1].trim());
 }
