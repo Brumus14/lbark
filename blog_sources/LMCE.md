@@ -1,3 +1,7 @@
+---
+title: LMCE
+date: 2025-04-14T12:00:00.000+01:00
+---
 # Introduction
 
 I've been learning the Zig programming language recently and I decided to start my first project, a Little Man Computer (LMC) Executor.
