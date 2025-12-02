@@ -58,7 +58,7 @@ async function loadBlogs() {
 
 async function getPosts() {
     const post_files_res = await fetch(
-        "http://api.github.com/repos/Brumus14/lbark/contents/posts",
+        "https://api.github.com/repos/Brumus14/lbark/contents/posts",
     ).then((res) => res.json());
 
     return (post_files = post_files_res
