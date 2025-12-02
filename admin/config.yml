@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  repo: Brumus14/lbark
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/d811bc4f-6147-4317-b501-530a9751708a/pkce
+  auth_token_endpoint: /sites/d811bc4f-6147-4317-b501-530a9751708a/token
+  gateway_url: https://gateway.decapbridge.com
+  squash_merges: true
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+  
+media_folder: "media"
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+site_url: https://lbark.netlify.app
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blog_sources"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name : "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+publish_mode: editorial_workflow
