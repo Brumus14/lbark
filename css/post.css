@@ -150,6 +150,10 @@ body {
   border-radius: 0.5rem;
 }
 
+.blog code {
+  font-family: "Jet Brains Mono";
+}
+
 .blog pre:has(code) {
   padding: 0.5rem;
   border-radius: 1rem;
@@ -157,16 +161,14 @@ body {
   background-color: var(--backgroundColour);
 }
 
-:not(pre) > code[class*="language-"] {
-  padding: 0 0.5rem;
-  background-color: var(--backgroundColour);
-  line-height: 0;
+.blog pre code {
+  border-radius: 0.6rem;
 }
 
-.blog pre code {
-  font-family: "Jet Brains Mono";
-  font-size: 2rem;
-  border-radius: 0.6rem;
+.blog :not(pre) code {
+  padding: 0 0.35rem;
+  border-radius: 0.5rem;
+  background-color: var(--backgroundColour);
 }
 
 .blog a,
