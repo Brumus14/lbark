@@ -1,134 +1,127 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12vh;
 }
 
 .blogs-container {
-    margin-top: 12vh;
-    width: 90vw;
+  margin-top: 12vh;
+  width: 90vw;
 }
 
 .blog-item {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: transform 0.3s, background-color 1s;
-    background-color: var(--secondaryColour);
-    padding: 4rem;
-    margin-bottom: 2rem;
-    border-radius: 2rem;
-    backface-visibility: hidden;
-    transform-origin: center center;
-    height: min-content;
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition:
+    transform 0.3s,
+    background-color 1s;
+  background-color: var(--secondaryColour);
+  padding: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  transform-origin: center center;
+  height: min-content;
+  text-decoration: none;
 }
 
 .blog-item:hover {
-    transform: scale(1.01);
-    background-color: var(--secondaryColour-high);
+  transform: scale(1.01);
+  background-color: var(--secondaryColour-high);
 }
 
 .blog-title {
-    font-family: 'Ubuntu Mono';
-    font-size: 4rem;
-    color: var(--light);
-    padding: 0 25rem 1rem 0;
+  font-family: "Ubuntu Mono";
+  font-size: 4rem;
+  color: var(--light);
+  padding-bottom: 1rem;
 }
 
 .blog-tags {
-    display: flex;
+  display: flex;
 }
 
 .blog-tag {
-    font-family: 'Lato';
-    font-size: 2rem;
-    color: var(--light-low);
-    background-color: var(--secondaryColour-high);
-    transition: background-color 1s;
-    padding: 0.3rem 0.7rem;
-    margin-right: 0.7rem;
-    border-radius: 0.5rem;
+  font-family: "Lato";
+  font-size: 2rem;
+  color: var(--light-low);
+  background-color: var(--secondaryColour-high);
+  transition: background-color 1s;
+  padding: 0.3rem 0.7rem;
+  margin-right: 0.7rem;
+  border-radius: 0.5rem;
 }
 
 .blog-item:hover .blog-tag {
-    background-color: var(--secondaryColour);
+  background-color: var(--secondaryColour);
 }
 
 .blog-date {
-    position: absolute;
-    right: 4rem;
-    top: 50%;
-    transform: translate(0%, -50%);
-    font-family: 'Lato';
-    font-size: 4rem;
-    color: var(--light-low);
+  padding-top: 0.5rem;
+  font-family: "Lato";
+  font-size: 2rem;
+  color: var(--light-low);
 }
 
 /* Media Queries */
 @media only screen and (max-width: 1680px) {
-    .blog {
-        width: 75vw;
-    }
+  .blog {
+    width: 75vw;
+  }
 
-    .blog .title {
-        width: calc(75vw - 12rem);
-        font-size: 4rem !important;
-    }
+  .blog .title {
+    width: calc(75vw - 12rem);
+    font-size: 4rem !important;
+  }
 
-    .blog p,
-    .blog code {
-        font-size: 1.5rem;
-    }
+  .blog p,
+  .blog code {
+    font-size: 1.5rem;
+  }
 
-    .blog h1 {
-        font-size: 3rem;
-    }
+  .blog h1 {
+    font-size: 3rem;
+  }
 
-    .blog h2 {
-        font-size: 2.75rem;
-    }
+  .blog h2 {
+    font-size: 2.75rem;
+  }
 
-    .blog h3 {
-        font-size: 2.5rem;
-    }
+  .blog h3 {
+    font-size: 2.5rem;
+  }
 
-    .blog h4 {
-        font-size: 2.25rem;
-    }
+  .blog h4 {
+    font-size: 2.25rem;
+  }
 
-    .blog h5 {
-        font-size: 2rem;
-    }
+  .blog h5 {
+    font-size: 2rem;
+  }
 
-    .blog h6 {
-        font-size: 1.75rem;
-    }
+  .blog h6 {
+    font-size: 1.75rem;
+  }
 }
 
 @media only screen and (max-width: 880px) {
-    .blog-title {
-        font-size: 3rem;
-        padding: 0 0 1rem 0;
-    }
+  .blog-title {
+    font-size: 3rem;
+    padding: 0 0 1rem 0;
+  }
 
-    .blog-tags {
-        font-size: 2rem;
-    }
+  .blog-tags {
+    font-size: 2rem;
+  }
 
-    .blog-date {
-        position: static;
-        font-size: 2rem;
-        transform: none;
-    }
+  .blog {
+    width: 90vw;
+    padding: 3rem;
+  }
 
-    .blog {
-        width: 90vw;
-        padding: 3rem;
-    }
-
-    .blog .title {
-        width: calc(90vw - 6rem);
-    }
+  .blog .title {
+    width: calc(90vw - 6rem);
+  }
 }

@@ -12,7 +12,6 @@ async function loadBlogs() {
     <p class="blog-title">${data.title}</p>
     <div class="blog-tags"></div>
     <p class="blog-date">${data.date}</p>`;
-        console.log(data);
 
         data.tags.sort().forEach((tag) => {
             let newTag = document.createElement("p");

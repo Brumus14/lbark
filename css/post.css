@@ -121,7 +121,8 @@ body {
   content: counter(list-counter) ")\00a0\00a0";
 }
 
-.blog table {
+.blog .table-container {
+  overflow: scroll;
   margin: 3rem 0;
 }
 
@@ -152,6 +153,7 @@ body {
 
 .blog code {
   font-family: "Jet Brains Mono";
+  font-size: 2rem;
 }
 
 .blog pre:has(code) {
@@ -163,6 +165,7 @@ body {
 
 .blog pre code {
   border-radius: 0.6rem;
+  padding: 0.5rem 1rem !important;
 }
 
 .blog :not(pre) code {

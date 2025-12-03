@@ -164,7 +164,6 @@ async function fetchRepositories() {
             response.splice(i, 1);
         }
     }
-    console.log(response);
 
     return response;
 }

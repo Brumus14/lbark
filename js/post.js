@@ -20,6 +20,13 @@ async function loadPost() {
         hljs.highlightElement(e);
     });
 
+    document.querySelectorAll("table").forEach((e) => {
+        let container = document.createElement("div");
+        container.className = "table-container";
+        e.parentNode.insertBefore(container, e);
+        container.appendChild(e);
+    });
+
     hoverableElement(document.querySelectorAll("a"));
 }
 
