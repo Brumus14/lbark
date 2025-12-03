@@ -63,28 +63,19 @@ body {
   color: var(--light);
 }
 
-.blog p:not(.title),
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 2rem 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 6rem;
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
+.blog h6 {
+  margin: 3rem 0 1rem 0;
 }
 
 .blog p {
   font-size: 2rem;
   line-height: 1.25;
+  margin-bottom: 1rem;
 }
 
 .blog h1 {

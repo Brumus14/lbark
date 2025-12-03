@@ -1,3 +1,10 @@
+---
+title: Little Man Computer Executor
+date: 02/12/2025
+tags:
+  - Zig
+  - Programming
+---
 # Introduction
 
 I've been learning the Zig programming language recently and I decided to start my first project, a Little Man Computer (LMC) Executor.

@@ -10,7 +10,7 @@ async function loadPost() {
     let blogElement = document.querySelector(".blog");
 
     const data = await getPostData(`${name}.md`);
-    blogElement.innerHTML += `<p class="title">${data[0].slice(1, -1)}</p>`;
+    blogElement.innerHTML += `<p class="title">${data.title}</p>`;
 
     blogElement.innerHTML += parsedBlog;
     blogElement.children[1].remove();

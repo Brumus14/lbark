@@ -9,12 +9,12 @@ async function loadBlogs() {
         let newBlog = document.createElement("a");
         newBlog.className = "blog-item";
         newBlog.innerHTML = `
-    <p class="blog-title">${data[0].slice(1, -1)}</p>
+    <p class="blog-title">${data.title}</p>
     <div class="blog-tags"></div>
-    <p class="blog-date">${data[1].slice(1, -1)}</p>`;
+    <p class="blog-date">${data.date}</p>`;
         console.log(data);
 
-        JSON.parse(data[2]).forEach((tag) => {
+        data.tags.sort().forEach((tag) => {
             let newTag = document.createElement("p");
             newTag.className = "blog-tag";
             newTag.innerHTML = tag;
@@ -73,8 +73,7 @@ async function getPostData(file) {
 
     const metadata_regex = /^---\n([\s\S]+?)\n---/.exec(blog);
     if (metadata_regex == null || metadata_regex.length < 1) return null;
-
     const metadata = metadata_regex[1];
 
-    return metadata.split("\n").map((line) => line.split(":")[1].trim());
+    return jsyaml.load(metadata);
 }
