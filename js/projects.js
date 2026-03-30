@@ -165,7 +165,7 @@ async function fetchRepositories() {
         }
     }
 
-    return response;
+    return response.filter((repo) => !repo.fork);
 }
 
 // Update project column layout
