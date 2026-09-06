@@ -16,16 +16,17 @@ const webAppData = [
 ];
 
 const repositories = [
-    "dotfiles",
-    "minecraft-clone",
+    "voxel-engine",
     "HTTP-server",
     "physics-engine",
+    "gameboy-emulator",
+    "software-renderer",
+    "LMCE",
+    "dotfiles",
     "Rust-MD5-hasher",
     "SHA-256",
     "lbark",
-    "LMCE",
     "horrible-game",
-    "scripts",
 ];
 
 function loadProjects() {
